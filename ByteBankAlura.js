@@ -1,12 +1,43 @@
-const Cliente1Nome = "Jonatas";
-const Cliente1CPF = 12345678911;
-const Cliente1Agencia = 1001;
-const Cliente1Saldo = 0;
 
-const Cliente2Nome = "Natanael";
-const Cliente2CPF = 32165498700;
-const Cliente2Agencia = 1001;
-const Cliente2Saldo = 0;
+class cliente{
+    nome;
+    cpf;
+}
 
-console.log(Cliente1Nome, Cliente1CPF, Cliente1Agencia, Cliente1Saldo)
-console.log(Cliente2Nome, Cliente2CPF, Cliente2Agencia, Cliente2Saldo)
+class contacorrente
+{
+    agencia;
+     #saldo = 0;
+    sacar(valor){
+        if(this.#saldo >= valor){
+        this.#saldo -= valor;
+        }else{
+            console.log("Não dá pra ficar negativo irmão")
+        }
+    }
+    depositar(valor){
+    if(valor > 0)
+    {
+        this.#saldo += valor;
+    }
+    }
+}
+
+const cliente1 = new cliente();
+cliente1.nome = "Jonatas";
+cliente1.cpf = 12345678911;
+
+const cliente2 = new cliente();
+cliente2.nome = "Natanael" 
+cliente2.cpf = 32165498700 
+
+const contacorrenteJonatas = new contacorrente();
+contacorrenteJonatas.agencia = 1001;
+contacorrenteJonatas.depositar(100);
+contacorrenteJonatas.sacar(20);
+
+
+
+
+
+console.log(contacorrenteJonatas)
