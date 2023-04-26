@@ -1,0 +1,16 @@
+{
+  "name": "bytebank",
+  "version": "1.0.0",
+  "description": "Projeto de treinamento da alura sobre JS POO",
+  "main": "ByteBankAlura.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "jspoo"
+  },
+  "author": "Igor Neves",
+  "license": "ISC",
+  "type": "module"
+}
