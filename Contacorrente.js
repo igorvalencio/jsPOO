@@ -1,19 +1,21 @@
 export class contacorrente {
+    cliente;
     agencia;
-    _saldo = 1000;
+    _saldo;
     sacar(valor) {
         if (this._saldo >= valor) {
             this._saldo -= valor;
             return valor;
         } else {
-            console.log("Não dá pra ficar negativo irmão")
+            console.log("Não aceitamos contas negativas.")
         }
 
     }
 
     depositar(valor) {
         if (valor <= 0) {
-            return;
+            return console.log("Só conseguimos depositar valor maior que R$1,00")
         } this._saldo += valor;
     }
-}
+
+    }
