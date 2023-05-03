@@ -1,4 +1,6 @@
-export class cliente {
+import { conta } from "./Conta.js";
+
+export class cliente extends conta {
     get cpf(){
        return this._cpf = cpf;
     }
