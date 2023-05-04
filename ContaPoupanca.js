@@ -1,10 +1,8 @@
-import {Conta} from "./Conta.js"
+import {conta} from "./Conta.js"
 
-export class contapoupanca extends conta{
-    constructor(saldoInicial, cliente, agencia){
-        this._saldo = saldoInicial;
-        this._cliente = cliente;
-        this._agencia = agencia;
-    }
-
+export class contapoupanca extends conta
+{
+   constructor(saldoInicial, cliente, agencia){
+    super(saldoInicial, cliente, agencia )
+   }
 }

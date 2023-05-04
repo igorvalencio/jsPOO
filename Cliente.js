@@ -6,6 +6,7 @@ export class cliente extends conta {
     }
 
     constructor(nome, cpf){
+        super(nome, cpf)
         this.nome = nome;
         this._cpf = cpf;
     }

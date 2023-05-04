@@ -1,26 +1,26 @@
-import { Conta } from "./Conta.js";
+import { conta } from "./Conta.js";
+import { cliente } from "./Cliente.js";
 
-export class contacorrente extends Conta 
-{
+export class contacorrente extends conta {
     static NumerodeContas = 0;
-    constructor(agencia, cliente)
-    {
-           super(0, cliente, agencia);
-            contacorrente.NumerodeContas++;
-    }
-
-    sacar(valor);
-    {
-       let taxa = 1.1;
-       const ValorSacado = taxa * valor;
-       if (this._saldo >= valor) {
-           this._saldo -= valor;
-           return valor;
-       } else {
-           console.log("Não aceitamos contas negativas.")
-       }
-   
+    constructor(cliente, agencia){
+        super(0, cliente, agencia)
+        contacorrente.NumerodeContas ++;
 
     }
+    sacar(valor) {
+        let taxa = 1.1;
+        const ValorSacado = taxa * valor;
+        if (this._saldo >= valor) {
+            this._saldo -= valor;
+            return valor;
+        } else {
+            console.log("Não aceitamos contas negativas.")
+        }
+
+    }
+  
+
+    
 }
 
