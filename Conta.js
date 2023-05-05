@@ -1,6 +1,4 @@
-import { cliente } from "./Cliente.js";
-
-export class conta {
+export class conta{
     constructor(saldoInicial, cliente, agencia) {
         this._saldo = saldoInicial;
         this._cliente = cliente;
