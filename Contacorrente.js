@@ -3,7 +3,7 @@ import { conta } from "./Conta.js";
 export class contacorrente extends conta {
     static NumerodeContas = 0;
     constructor(cliente, agencia){
-         super(0, cliente, agencia)
+         super(100, cliente, agencia)
         contacorrente.NumerodeContas ++;
 
     }

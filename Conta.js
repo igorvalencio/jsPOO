@@ -1,8 +1,11 @@
-export class conta{
+export class conta {
     constructor(saldoInicial, cliente, agencia) {
         this._saldo = saldoInicial;
         this._cliente = cliente;
         this._agencia = agencia;
+        if (this.constructor == conta) {
+            throw new Error("Não é possível criar um construtor tipo Conta.")
+        }
     }
 
 
@@ -21,15 +24,7 @@ export class conta{
     }
 
     sacar(valor) {
-        let taxa = 1;
-        const ValorSacado = taxa * valor;
-        if (this._saldo >= valor) {
-            this._saldo -= valor;
-            return valor;
-        } else {
-            console.log("Não aceitamos contas negativas.")
-        }
-
+        throw new Error("O método sacar é abstrato")
     }
 
     depositar(valor) {
