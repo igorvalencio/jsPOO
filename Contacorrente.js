@@ -8,14 +8,10 @@ export class contacorrente extends conta {
 
     }
     sacar(valor) {
-        let taxa = 1.1;
-        const ValorSacado = taxa * valor;
-        if (this._saldo >= valor) {
-            this._saldo -= valor;
-            return valor;
-        } else {
-            console.log("Não aceitamos contas negativas.")
-        }
+        {
+            const taxa = 1.02;
+            return this._sacar(valor,taxa)
+         }
 
     }
   

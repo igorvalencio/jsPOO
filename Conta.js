@@ -1,5 +1,8 @@
 export class conta{
     constructor(saldoInicial, cliente, agencia) {
+        if(this.constructor == conta){
+             throw new Error("Não é possível criar uma classe abstrata")
+        }
         this._saldo = saldoInicial;
         this._cliente = cliente;
         this._agencia = agencia;
@@ -20,15 +23,8 @@ export class conta{
         return this._saldo;
     }
 
-    sacar(valor) {
-        let taxa = 1;
-        const ValorSacado = taxa * valor;
-        if (this._saldo >= valor) {
-            this._saldo -= valor;
-            return valor;
-        } else {
-            console.log("Não aceitamos contas negativas.")
-        }
+    sacar() {
+      throw new Error("Sacar é um metodo abstrato")
 
     }
 
