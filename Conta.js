@@ -1,4 +1,4 @@
-export class conta{
+export class conta {
     constructor(saldoInicial, cliente, agencia) {
         if(this.constructor == conta){
              throw new Error("Não é possível criar uma classe abstrata")
@@ -6,6 +6,9 @@ export class conta{
         this._saldo = saldoInicial;
         this._cliente = cliente;
         this._agencia = agencia;
+        if (this.constructor == conta) {
+            throw new Error("Não é possível criar um construtor tipo Conta.")
+        }
     }
 
 
@@ -23,9 +26,14 @@ export class conta{
         return this._saldo;
     }
 
+<<<<<<< HEAD
     sacar() {
       throw new Error("Sacar é um metodo abstrato")
 
+=======
+    sacar(valor) {
+        throw new Error("O método sacar é abstrato")
+>>>>>>> 56aa4573174ddf65bb6521bc2908a07d3603d8bf
     }
 
     depositar(valor) {
