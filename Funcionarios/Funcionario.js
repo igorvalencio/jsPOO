@@ -7,11 +7,13 @@ export class funcionario {
         this._bonificacao = 1;
         this._senha; 
     }
-    autenticar(){
-        return true;
-    }
 
     CadastrarSenha(senha){
-        return this._senha = senha;
+         this._senha = senha;
+        
     }
+
+    autenticar(){
+        return true;
+    } 
 }
